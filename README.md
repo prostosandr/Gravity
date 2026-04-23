@@ -1,4 +1,11 @@
-Action,Keyboard,Gamepad
-Move Left / Right,A / D,Left Stick
-Jump,Space,A Button
-Gravity Inversion,Shift,Right Trigger (RT)
+### Controls
+
+* **Movement**
+    * **Keyboard:** `A` / `D`
+    * **Gamepad:** Left Stick (Left/Right)
+* **Jump**
+    * **Keyboard:** `Space`
+    * **Gamepad:** `A` Button
+* **Gravity Inversion**
+    * **Keyboard:** `Shift`
+    * **Gamepad:** Right Trigger (RT)
