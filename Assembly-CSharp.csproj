@@ -50,14 +50,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GravityInverter.cs" />
+    <Compile Include="Assets\Scripts\GravityWellPreview.cs" />
     <Compile Include="Assets\Scripts\PlayerInputProvider.cs" />
+    <Compile Include="Assets\Scripts\GravityWell.cs" />
     <Compile Include="Assets\Scripts\GroundMovement.cs" />
     <Compile Include="Assets\Scripts\WallInteractor.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Interaction\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\CameraMover.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Scripts\CastGravityWells.cs" />
     <Compile Include="Assets\Scripts\Jumper.cs" />
+    <Compile Include="Assets\Scripts\GravityWellInteraction.cs" />
     <Compile Include="Assets\Scripts\ColliderChecker.cs" />
   </ItemGroup>
   <ItemGroup>
