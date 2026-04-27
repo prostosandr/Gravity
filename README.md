@@ -8,9 +8,9 @@
     * **Gamepad:** `A` Button
 * **Gravity Inversion**
     * **Keyboard:** `Shift`
-    * **Gamepad:** Right Trigger (RT)
+    * **Gamepad:** `Y` Button
 * **Place Gravity Well**
-    * **Keyboard:** Hold `E`
+    * **Keyboard:** Hold `CTRL`
     * **Gamepad:** Left Trigger (LT)
 * **Confirm Placement**
     * **Keyboard:** Left Mouse Button (LMB)
