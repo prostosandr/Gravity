@@ -29,18 +29,13 @@ public class Jumper : MonoBehaviour
         if (onWall || _groundChecker.CheckCollider()) 
             return;
 
-        float gravityDirection = isGravityInverted ? 1f : -1f;
+        float gravityDirection = Mathf.Sign(Physics2D.gravity.y);
 
-        bool isFalling = isGravityInverted ? _rigidbody.linearVelocityY > 0 : _rigidbody.linearVelocityY < 0;
-        bool isAscending = isGravityInverted ? _rigidbody.linearVelocityY < 0 : _rigidbody.linearVelocityY > 0;
+        bool isFalling = Mathf.Sign(_rigidbody.linearVelocityY) == Mathf.Sign(Physics2D.gravity.y);
 
-        if (isFalling && !isJumpPressed)
-        {
-            _rigidbody.linearVelocity += new Vector2(0, gravityDirection) * Mathf.Abs(Physics2D.gravity.y) * _fallForce * Time.fixedDeltaTime;
-        }
-        else if (isAscending && !isJumpPressed)
-        {
-            _rigidbody.linearVelocity += new Vector2(0, gravityDirection) * Mathf.Abs(Physics2D.gravity.y) * _jumpBrakingForce * Time.fixedDeltaTime;
-        }
+        if (isFalling)
+            _rigidbody.linearVelocity += Vector2.up * gravityDirection * Mathf.Abs(Physics2D.gravity.y) * _fallForce * Time.fixedDeltaTime;
+        else if (isFalling == false && !isJumpPressed)
+            _rigidbody.linearVelocity += Vector2.up * gravityDirection * Mathf.Abs(Physics2D.gravity.y) * _jumpBrakingForce * Time.fixedDeltaTime;
     }
 }

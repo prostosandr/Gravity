@@ -9,14 +9,12 @@ public class WallInteractor : MonoBehaviour
     [SerializeField] private ColliderChecker _wallChecker;
 
     [SerializeField] private float _wallJumpForce;
-    [SerializeField] private float _gravityScaleWallSlip;
+    [SerializeField] private float _wallSlideSpeed;
     [SerializeField] private float _delayAfterWallJump;
     [SerializeField] private float _wallJumpVerticalBoost;
 
     private Rigidbody2D _rigidbody;
     private Rotator _rotator;
-
-    private float _defaultGravity;
 
     private bool _isOnWall;
     private bool _isWallJumping;
@@ -28,8 +26,6 @@ public class WallInteractor : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _rotator = GetComponent<Rotator>();
-
-        _defaultGravity = Mathf.Abs(_rigidbody.gravityScale);
     }
 
     public void HandleWallSlide(bool isInverted)
@@ -43,17 +39,23 @@ public class WallInteractor : MonoBehaviour
         if (touchingWall && touchingGround == false)
         {
             if (_isOnWall == false)
+            {
                 _rigidbody.linearVelocity = Vector2.zero;
+                _isOnWall = true;
+            }
 
-            _isOnWall = true;
+            float gravityDirection = Mathf.Sign(Physics2D.gravity.y);
 
-            _rigidbody.gravityScale = isInverted ? -_gravityScaleWallSlip : _gravityScaleWallSlip;
-        }
-        else
-        {
-            _isOnWall = false;
+            bool isMovingWithGravity = Mathf.Sign(_rigidbody.linearVelocityY) == gravityDirection;
 
-            _rigidbody.gravityScale = isInverted ? -_defaultGravity : _defaultGravity;
+            if (isMovingWithGravity || Mathf.Abs(_rigidbody.linearVelocityY) < 0.1f)
+            {
+                _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocityX, gravityDirection * _wallSlideSpeed);
+            }
+            else
+            {
+                _isOnWall = false;
+            }
         }
     }
 
@@ -66,7 +68,6 @@ public class WallInteractor : MonoBehaviour
 
         Vector2 jumpDirection = ((Vector2)transform.up * _wallJumpVerticalBoost + awayFromWall).normalized;
 
-        _rigidbody.gravityScale = isInverted ? -_defaultGravity : _defaultGravity;
         _rigidbody.linearVelocity = Vector2.zero;
         _rigidbody.AddForce(jumpDirection * _wallJumpForce, ForceMode2D.Impulse);
 

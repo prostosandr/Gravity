@@ -4,7 +4,6 @@ public class GravityWellInteraction : MonoBehaviour
 {
     [SerializeField] private GravityWell _gravityWell;
     [SerializeField] private GravityWellPreview _gravityWellPreview;
-    [SerializeField] private SpriteRenderer _previewRenderer;
     [SerializeField] private LineRenderer _aimLine;
     [SerializeField] private LayerMask _hitLayers;
     [SerializeField] private float _maxDistance;
@@ -40,7 +39,7 @@ public class GravityWellInteraction : MonoBehaviour
             _gravityWellPreview.gameObject.SetActive(true);
             _gravityWellPreview.transform.position = hit.point;
 
-            _previewRenderer.size = new Vector2(_currentWidth, _previewRenderer.size.y);
+            _gravityWellPreview.PrewievRenderer.size = new Vector2(_currentWidth, _gravityWellPreview.PrewievRenderer.size.y);
 
             _aimLine.SetPosition(1, hit.point);
 

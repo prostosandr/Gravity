@@ -49,20 +49,20 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.6f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GravityInverter.cs" />
+    <Compile Include="Assets\Scripts\Player\WallInteractor.cs" />
+    <Compile Include="Assets\Scripts\Player\ColliderChecker.cs" />
     <Compile Include="Assets\Scripts\GravityWellPreview.cs" />
     <Compile Include="Assets\Scripts\PlayerInputProvider.cs" />
     <Compile Include="Assets\Scripts\GravityWell.cs" />
-    <Compile Include="Assets\Scripts\GroundMovement.cs" />
-    <Compile Include="Assets\Scripts\WallInteractor.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Interaction\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Player\GravityWellInteraction.cs" />
     <Compile Include="Assets\Scripts\CameraMover.cs" />
-    <Compile Include="Assets\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Scripts\CastGravityWells.cs" />
-    <Compile Include="Assets\Scripts\Jumper.cs" />
-    <Compile Include="Assets\Scripts\GravityWellInteraction.cs" />
-    <Compile Include="Assets\Scripts\ColliderChecker.cs" />
+    <Compile Include="Assets\Scripts\Player\Jumper.cs" />
+    <Compile Include="Assets\Scripts\Player\Rotator.cs" />
+    <Compile Include="Assets\Scripts\Player\GravityInverter.cs" />
+    <Compile Include="Assets\Scripts\Player\DamageHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\GroundMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
