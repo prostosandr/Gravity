@@ -14,7 +14,7 @@
     * **Gamepad:** Left Trigger (LT)
 * **Confirm Placement**
     * **Keyboard:** Left Mouse Button (LMB)
-    * **Gamepad:** Right Bumper (RB)
+    * **Gamepad:** Right Trigger (RT)
 * **Adjust Gravity Well Width**
     * **Decrease / Increase:** `Q` / `E`
     * **Gamepad:** Left Bumper (LB) / Right Bumper (RB) 
