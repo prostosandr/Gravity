@@ -42,10 +42,12 @@ public class Player : MonoBehaviour
     {
         if (_input.IsPlaceGravityWellPressed)
         {
+            float radiusInput = _input.RadiusChangeInput;
+
             if (_input.IsAimingWithStick)
-                _gravityWellInteraction.UpdatePreview(_input.AimDirection, true);
+                _gravityWellInteraction.UpdatePreview(_input.AimDirection, true, radiusInput);
             else
-                _gravityWellInteraction.UpdatePreview(_input.GetCursorPosition(), false);
+                _gravityWellInteraction.UpdatePreview(_input.GetCursorPosition(), false, radiusInput);
         }
         else
         {

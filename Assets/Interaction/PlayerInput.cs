@@ -102,15 +102,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Aim"",
-                    ""type"": ""Value"",
-                    ""id"": ""d96de8fd-4140-4074-b6ae-7a49619cc07b"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""eb989979-3342-4dd0-97e1-c5326a265689"",
@@ -129,6 +120,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""GravityWellAim"",
+                    ""type"": ""Value"",
+                    ""id"": ""d96de8fd-4140-4074-b6ae-7a49619cc07b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""PlaceGravityWell"",
                     ""type"": ""Button"",
                     ""id"": ""b96e1b4e-db7d-42d4-808f-b106674acbe4"",
@@ -136,6 +136,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeRadius"",
+                    ""type"": ""Value"",
+                    ""id"": ""82d0e33b-199f-4366-b46b-02a64d1a482f"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Shoot"",
@@ -228,7 +237,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""620cb8c0-3582-40dc-89d2-c367cb7336b3"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""path"": ""<XInputController>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
@@ -239,7 +248,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""38ea06dc-c125-4265-a81b-65d69817c94d"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/ctrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard and Mosue"",
@@ -272,7 +281,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b2d39d3c-922d-4fa7-9925-ed1a20bba169"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
@@ -287,9 +296,75 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Gamepad"",
-                    ""action"": ""Aim"",
+                    ""action"": ""GravityWellAim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""e0a17346-d13a-42d2-bf46-085ff7e957a4"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""0f803e1f-c87b-48f6-b91f-208f34acdcad"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""916c674b-7e81-400b-97ef-51b02c659979"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""5f5d1778-f6e9-4c25-a6be-1f348c45f3db"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""26e1c572-7c9e-462e-8b49-5e7623f58f91"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""48c0415b-7574-4079-ba76-0864bb9a1e8f"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""ChangeRadius"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -327,10 +402,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_InvertGravity = m_Player.FindAction("InvertGravity", throwIfNotFound: true);
+        m_Player_GravityWellAim = m_Player.FindAction("GravityWellAim", throwIfNotFound: true);
         m_Player_PlaceGravityWell = m_Player.FindAction("PlaceGravityWell", throwIfNotFound: true);
+        m_Player_ChangeRadius = m_Player.FindAction("ChangeRadius", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
     }
 
@@ -413,10 +489,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_Aim;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_InvertGravity;
+    private readonly InputAction m_Player_GravityWellAim;
     private readonly InputAction m_Player_PlaceGravityWell;
+    private readonly InputAction m_Player_ChangeRadius;
     private readonly InputAction m_Player_Shoot;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
@@ -434,10 +511,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Player_Move;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Aim".
-        /// </summary>
-        public InputAction @Aim => m_Wrapper.m_Player_Aim;
-        /// <summary>
         /// Provides access to the underlying input action "Player/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
@@ -446,9 +519,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @InvertGravity => m_Wrapper.m_Player_InvertGravity;
         /// <summary>
+        /// Provides access to the underlying input action "Player/GravityWellAim".
+        /// </summary>
+        public InputAction @GravityWellAim => m_Wrapper.m_Player_GravityWellAim;
+        /// <summary>
         /// Provides access to the underlying input action "Player/PlaceGravityWell".
         /// </summary>
         public InputAction @PlaceGravityWell => m_Wrapper.m_Player_PlaceGravityWell;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ChangeRadius".
+        /// </summary>
+        public InputAction @ChangeRadius => m_Wrapper.m_Player_ChangeRadius;
         /// <summary>
         /// Provides access to the underlying input action "Player/Shoot".
         /// </summary>
@@ -482,18 +563,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Aim.started += instance.OnAim;
-            @Aim.performed += instance.OnAim;
-            @Aim.canceled += instance.OnAim;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
             @InvertGravity.started += instance.OnInvertGravity;
             @InvertGravity.performed += instance.OnInvertGravity;
             @InvertGravity.canceled += instance.OnInvertGravity;
+            @GravityWellAim.started += instance.OnGravityWellAim;
+            @GravityWellAim.performed += instance.OnGravityWellAim;
+            @GravityWellAim.canceled += instance.OnGravityWellAim;
             @PlaceGravityWell.started += instance.OnPlaceGravityWell;
             @PlaceGravityWell.performed += instance.OnPlaceGravityWell;
             @PlaceGravityWell.canceled += instance.OnPlaceGravityWell;
+            @ChangeRadius.started += instance.OnChangeRadius;
+            @ChangeRadius.performed += instance.OnChangeRadius;
+            @ChangeRadius.canceled += instance.OnChangeRadius;
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
@@ -511,18 +595,21 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Aim.started -= instance.OnAim;
-            @Aim.performed -= instance.OnAim;
-            @Aim.canceled -= instance.OnAim;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
             @InvertGravity.started -= instance.OnInvertGravity;
             @InvertGravity.performed -= instance.OnInvertGravity;
             @InvertGravity.canceled -= instance.OnInvertGravity;
+            @GravityWellAim.started -= instance.OnGravityWellAim;
+            @GravityWellAim.performed -= instance.OnGravityWellAim;
+            @GravityWellAim.canceled -= instance.OnGravityWellAim;
             @PlaceGravityWell.started -= instance.OnPlaceGravityWell;
             @PlaceGravityWell.performed -= instance.OnPlaceGravityWell;
             @PlaceGravityWell.canceled -= instance.OnPlaceGravityWell;
+            @ChangeRadius.started -= instance.OnChangeRadius;
+            @ChangeRadius.performed -= instance.OnChangeRadius;
+            @ChangeRadius.canceled -= instance.OnChangeRadius;
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
@@ -600,13 +687,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Aim" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAim(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -621,12 +701,26 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInvertGravity(InputAction.CallbackContext context);
         /// <summary>
+        /// Method invoked when associated input action "GravityWellAim" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGravityWellAim(InputAction.CallbackContext context);
+        /// <summary>
         /// Method invoked when associated input action "PlaceGravityWell" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPlaceGravityWell(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ChangeRadius" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnChangeRadius(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Shoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

@@ -8,7 +8,7 @@ public class GravityWell : MonoBehaviour
     [SerializeField] private float _maxDistance;
     [SerializeField] private float _raycastOffest;
 
-    public void Initialize()
+    public void Initialize(float width)
     {
         Vector2 rayStart = transform.position + transform.up * _raycastOffest;
 
@@ -25,9 +25,9 @@ public class GravityWell : MonoBehaviour
             distance = _maxDistance;
         }
 
-        _collider.size = new Vector2(_collider.size.x, distance);
+        _collider.size = new Vector2(width, distance);
         _collider.offset = new Vector2(0, distance / 2f);
 
-        _vizualZone.size = new Vector2(_vizualZone.size.x, distance);
+        _vizualZone.size = new Vector2(width, distance);
     }
 }

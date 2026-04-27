@@ -4,20 +4,29 @@ public class GravityWellInteraction : MonoBehaviour
 {
     [SerializeField] private GravityWell _gravityWell;
     [SerializeField] private GravityWellPreview _gravityWellPreview;
+    [SerializeField] private SpriteRenderer _previewRenderer;
     [SerializeField] private LineRenderer _aimLine;
     [SerializeField] private LayerMask _hitLayers;
     [SerializeField] private float _maxDistance;
 
+    [SerializeField] private float _minWidth;
+    [SerializeField] private float _maxWidth;
+    [SerializeField] private float _changeSpeed;
+    [SerializeField] private float _currentWidth;
+
     private Vector2 _currentHitPosition;
     private Quaternion _currentRotation;
 
-    public void UpdatePreview(Vector2 input, bool isGamePad)
+    public void UpdatePreview(Vector2 input, bool isGamePad, float radiusInput)
     {
+        _currentWidth += radiusInput * _changeSpeed * Time.deltaTime;
+        _currentWidth = Mathf.Clamp(_currentWidth, _minWidth, _maxWidth);
+
         Vector2 orign = transform.position;
         Vector2 direction;
 
-        if(isGamePad)
-            direction = input.normalized;    
+        if (isGamePad)
+            direction = input.normalized;
         else
             direction = (input - orign).normalized;
 
@@ -30,6 +39,8 @@ public class GravityWellInteraction : MonoBehaviour
         {
             _gravityWellPreview.gameObject.SetActive(true);
             _gravityWellPreview.transform.position = hit.point;
+
+            _previewRenderer.size = new Vector2(_currentWidth, _previewRenderer.size.y);
 
             _aimLine.SetPosition(1, hit.point);
 
@@ -62,12 +73,12 @@ public class GravityWellInteraction : MonoBehaviour
 
     public void PlaceGravityWell(bool canPlaceGravityWell)
     {
-        if(canPlaceGravityWell)
+        if (canPlaceGravityWell)
         {
             _gravityWell.gameObject.SetActive(true);
             _gravityWell.transform.position = _currentHitPosition;
             _gravityWell.transform.rotation = _currentRotation;
-            _gravityWell.Initialize();
+            _gravityWell.Initialize(_currentWidth);
         }
     }
 }

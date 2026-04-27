@@ -10,7 +10,9 @@ public class PlayerInputProvider : MonoBehaviour
     private PlayerInput _input;
 
     public Vector2 MoveDirection => _input.Player.Move.ReadValue<Vector2>();
-    public Vector2 AimDirection => _input.Player.Aim.ReadValue<Vector2>();
+    public Vector2 AimDirection => _input.Player.GravityWellAim.ReadValue<Vector2>();
+
+    public float RadiusChangeInput => _input.Player.ChangeRadius.ReadValue<float>();
 
     public bool IsJumpPressed => _input.Player.Jump.IsPressed();
     public bool IsPlaceGravityWellPressed => _input.Player.PlaceGravityWell.IsPressed();

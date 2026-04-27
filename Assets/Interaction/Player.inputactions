@@ -16,15 +16,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Aim",
-                    "type": "Value",
-                    "id": "d96de8fd-4140-4074-b6ae-7a49619cc07b",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "eb989979-3342-4dd0-97e1-c5326a265689",
@@ -43,6 +34,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "GravityWellAim",
+                    "type": "Value",
+                    "id": "d96de8fd-4140-4074-b6ae-7a49619cc07b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "PlaceGravityWell",
                     "type": "Button",
                     "id": "b96e1b4e-db7d-42d4-808f-b106674acbe4",
@@ -50,6 +50,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeRadius",
+                    "type": "Value",
+                    "id": "82d0e33b-199f-4366-b46b-02a64d1a482f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Shoot",
@@ -142,7 +151,7 @@
                 {
                     "name": "",
                     "id": "620cb8c0-3582-40dc-89d2-c367cb7336b3",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<XInputController>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -153,7 +162,7 @@
                 {
                     "name": "",
                     "id": "38ea06dc-c125-4265-a81b-65d69817c94d",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard and Mosue",
@@ -186,7 +195,7 @@
                 {
                     "name": "",
                     "id": "b2d39d3c-922d-4fa7-9925-ed1a20bba169",
-                    "path": "<Gamepad>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -201,9 +210,75 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Aim",
+                    "action": "GravityWellAim",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "e0a17346-d13a-42d2-bf46-085ff7e957a4",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeRadius",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "0f803e1f-c87b-48f6-b91f-208f34acdcad",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "ChangeRadius",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "916c674b-7e81-400b-97ef-51b02c659979",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "ChangeRadius",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "5f5d1778-f6e9-4c25-a6be-1f348c45f3db",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeRadius",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "26e1c572-7c9e-462e-8b49-5e7623f58f91",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ChangeRadius",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "48c0415b-7574-4079-ba76-0864bb9a1e8f",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "ChangeRadius",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
