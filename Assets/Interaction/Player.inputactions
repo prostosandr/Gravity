@@ -34,7 +34,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "GravityWellAim",
+                    "name": "Aim",
                     "type": "Value",
                     "id": "d96de8fd-4140-4074-b6ae-7a49619cc07b",
                     "expectedControlType": "Vector2",
@@ -43,7 +43,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "PlaceGravityWell",
+                    "name": "CastAbility",
                     "type": "Button",
                     "id": "b96e1b4e-db7d-42d4-808f-b106674acbe4",
                     "expectedControlType": "",
@@ -64,6 +64,24 @@
                     "name": "Shoot",
                     "type": "Button",
                     "id": "d3df87c3-e313-4831-82b3-bbf2caa12ed9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "38df844f-82c2-4df6-a960-a033e59db84f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reload",
+                    "type": "Button",
+                    "id": "ccd19f75-0c01-49a4-8f09-b60607438468",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -166,7 +184,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard and Mosue",
-                    "action": "PlaceGravityWell",
+                    "action": "CastAbility",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -177,7 +195,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "PlaceGravityWell",
+                    "action": "CastAbility",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -210,7 +228,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "GravityWellAim",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -279,6 +297,50 @@
                     "action": "ChangeRadius",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "5a3ba9aa-8fd6-4fdf-ab5e-af01e18156e7",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bec567ae-1344-4878-b03c-3765ec8662d1",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f841ffc-a28f-4f44-9629-f46213fca87a",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b084a99-feb5-471c-9bc3-f6ff8ca26f5c",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

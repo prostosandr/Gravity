@@ -13,11 +13,11 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - GravityWell
-  - 
-  - 
-  - 
-  - 
+  - Prors
+  - InteractiveObjects
+  - Button
+  - Bullets
+  - GravityWellZone
   - 
   - 
   - 

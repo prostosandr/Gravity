@@ -1,84 +1,133 @@
 using UnityEngine;
 
-[RequireComponent(typeof(GroundMovement))]
+[RequireComponent(typeof(Mover))]
+[RequireComponent(typeof(Rotator))]
 [RequireComponent(typeof(Jumper))]
 [RequireComponent(typeof(WallInteractor))]
 [RequireComponent(typeof(GravityInverter))]
-[RequireComponent(typeof(GravityWellInteraction))]
+[RequireComponent(typeof(AbilityCaster))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] private PlayerConfig _config;
     [SerializeField] private PlayerInputProvider _input;
 
-    private GroundMovement _movement;
+    [SerializeField] private ColliderChecker _groundChecker;
+    [SerializeField] private ColliderChecker _wallChecker;
+
+    [SerializeField] private Gun _gun;
+
+    private Mover _mover;
     private Jumper _jumper;
+    private Rotator _rotator;
     private WallInteractor _wallInteractor;
     private GravityInverter _gravityInverter;
-    private GravityWellInteraction _gravityWellInteraction;
+    private AbilityCaster _caster;
+    private PickUpLogic _pickUpLogic;
+
+    private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _movement = GetComponent<GroundMovement>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+
+        _mover = GetComponent<Mover>();
         _jumper = GetComponent<Jumper>();
+        _rotator = GetComponent<Rotator>();
         _wallInteractor = GetComponent<WallInteractor>();
         _gravityInverter = GetComponent<GravityInverter>();
-        _gravityWellInteraction = GetComponent<GravityWellInteraction>();
+        _caster = GetComponent<AbilityCaster>();
+        _pickUpLogic = GetComponent<PickUpLogic>();
     }
 
     private void OnEnable()
     {
+        Initialize();
+
         _input.JumpPressed += OnJumpHandle;
         _input.InvertGravityPressed += OnGravityHandle;
-        _input.ShootPressed += OnGravityWellHandle;
+        _input.AbilityPressed += _caster.OnStartAbility;
+        _input.AbilityRelesed += _caster.OnCancelAbility;
+        _input.ShootPressed += OnShootHandle;
+        _input.InteractionPressed += PickUpHandle;
     }
 
     private void OnDisable()
     {
         _input.JumpPressed -= OnJumpHandle;
         _input.InvertGravityPressed -= OnGravityHandle;
-        _input.ShootPressed -= OnGravityWellHandle;
+        _input.AbilityPressed -= _caster.OnStartAbility;
+        _input.AbilityRelesed -= _caster.OnCancelAbility;
+        _input.ShootPressed -= OnShootHandle;
+        _input.InteractionPressed -= PickUpHandle;
     }
 
     private void Update()
     {
-        if (_input.IsPlaceGravityWellPressed)
+        if (_input.IsCastAbilityHeld)
         {
-            float radiusInput = _input.RadiusChangeInput;
-
             if (_input.IsAimingWithStick)
-                _gravityWellInteraction.UpdatePreview(_input.AimDirection, true, radiusInput);
+                _caster.OnAimAbility(_input.AimDirection, true, _input.RadiusChangeInput);
             else
-                _gravityWellInteraction.UpdatePreview(_input.GetCursorPosition(), false, radiusInput);
-        }
-        else
-        {
-            _gravityWellInteraction.DeactivatePreview();
-            _gravityWellInteraction.DeactivateAimLine();
+                _caster.OnAimAbility(_input.GetCursorPosition(), false, _input.RadiusChangeInput);
         }
     }
 
     private void FixedUpdate()
     {
-        _wallInteractor.HandleWallSlide(_gravityInverter.IsInverted);
+        _wallInteractor.HandleWallSlide(_gravityInverter.IsInverted, _wallChecker.CheckCollider(), _groundChecker.CheckCollider());
 
-        bool canMove = _wallInteractor.IsOnWall == false && _wallInteractor.IsWallJumping == false;
-        _movement.Move(_input.MoveDirection.x, canMove, _gravityInverter.IsInverted);
+        MoveHandle();
 
-        _jumper.ModifyFall(_input.IsJumpPressed, _wallInteractor.IsOnWall, _gravityInverter.IsInverted);
+        _jumper.ModifyFall(_input.IsJumpHeld, _wallInteractor.IsOnWall, _groundChecker.CheckCollider(), _gravityInverter.IsInverted);
+    }
+
+    private void Initialize()
+    {
+        _mover.Initialize(_rigidbody, _config.Speed, _config.InterpolationSpeed);
+        _jumper.Initialize(_rigidbody, _config.JumpForce, _config.FallForce, _config.JumpBrackingForce);
+        _wallInteractor.Initialize(_rigidbody, _config.WallJumpForce, _config.WallSlideSpeed, _config.DelayAfterWalljump, _config.WallJumpVerticalBoost);
+        _caster.Initialize();
+    }
+
+    private void MoveHandle()
+    {
+        if (_wallInteractor.IsOnWall == false && _wallInteractor.IsWallJumping == false)
+        {
+            if (Mathf.Abs(_input.MoveDirection.x) > 0.1f)
+                _rotator.TurnForward(_input.MoveDirection.x, _gravityInverter.IsInverted);
+
+            _mover.Move(_input.MoveDirection.x);
+        }
     }
 
     private void OnJumpHandle()
     {
-        if (!_wallInteractor.TryWallJump(_gravityInverter.IsInverted))
-            _jumper.TryJump();
+        if (_wallInteractor.TryWallJump(_gravityInverter.IsInverted) == false)
+        {
+            _jumper.TryJump(_groundChecker.CheckCollider());
+        }
+        else
+        {
+            _rotator.TurnForward(-transform.right.x, _gravityInverter.IsInverted);
+        }
     }
 
     private void OnGravityHandle()
     {
         _gravityInverter.ToggleGravity(_input.MoveDirection.x);
+        _rotator.TurnForward(_input.MoveDirection.x, _gravityInverter.IsInverted);
     }
 
-    private void OnGravityWellHandle(bool canPlaceGravityWell)
+    private void OnShootHandle(bool canPlaceGravityWell)
     {
-        _gravityWellInteraction.PlaceGravityWell(canPlaceGravityWell);
+        if (canPlaceGravityWell)
+            _caster.Cast(_input.IsCastAbilityHeld);
+        else
+            _gun.Shoot();
+    }
+
+    private void PickUpHandle()
+    {
+        _pickUpLogic.PickUpObject();
     }
 }

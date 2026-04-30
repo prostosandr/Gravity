@@ -3,52 +3,80 @@
   "WorkspaceRootPath": "D:\\Git\\Gravity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\gravitywellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gravitywellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\Gravity\\Assets\\Scripts\\GravityWellPreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GravityWellPreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\wallinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wallinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Bullet\\BulletLifeCycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\bulletspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\pickuplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\pickuplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\damagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\damagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\colliderchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\colliderchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\playerinputprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinputprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\jumper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\jumper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\camerashaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerashaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\groundmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\groundmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\gravityinverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\gravityinverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\gravitywell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gravitywell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\gravityinverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gravityinverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\gravitywellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\gravitywellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\colliderchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\colliderchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player\\wallinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\wallinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\cameramover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\bullet\\bulletmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet\\bulletmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\gunrotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gunrotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\git\\gravity\\assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Bullet\\BulletLifeCycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,154 +86,246 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Jumper.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Jumper.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Jumper.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Jumper.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Jumper.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwC0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Button.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Button.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Button.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Button.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Button.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:32:05.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GravityInverter.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityInverter.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GravityInverter.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityInverter.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GravityInverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:31:12.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GroundMovement.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GroundMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GroundMovement.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GroundMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GroundMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:23:56.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GravityWell.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWell.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GravityWell.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWell.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GravityWell.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T05:21:02.824Z"
+              "WhenOpened": "2026-04-28T17:58:42.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Player.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAmwFMAAAABAAAAAAAAAA==",
+              "Title": "GravityInverter.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\GravityInverter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\GravityInverter.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\GravityInverter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\GravityInverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:23:36.819Z"
+              "WhenOpened": "2026-04-28T12:47:47.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
+              "Title": "Rotator.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\Rotator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Rotator.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\Rotator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Rotator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T12:47:32.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "PlayerInputProvider.cs",
               "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\PlayerInputProvider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInputProvider.cs",
               "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\PlayerInputProvider.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerInputProvider.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T05:24:45.38Z"
+              "WhenOpened": "2026-04-28T09:51:11.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rotator.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Rotator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Rotator.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Rotator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Rotator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "Door.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Door.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Door.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:23:46.132Z"
+              "WhenOpened": "2026-04-28T17:30:12.729Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WallInteractor.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\WallInteractor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\WallInteractor.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\WallInteractor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\WallInteractor.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAuwDAAAAAAAAAAAAAAAA==",
+              "Title": "BulletLifeCycle.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T05:19:17.37Z",
+              "WhenOpened": "2026-04-29T06:27:33.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ColliderChecker.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\ColliderChecker.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ColliderChecker.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\ColliderChecker.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ColliderChecker.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "BulletSpawner.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\BulletSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BulletSpawner.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\BulletSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BulletSpawner.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCIAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:30:08.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CameraMover.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\CameraMover.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraMover.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\CameraMover.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraMover.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T06:29:38.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GravityWellInteraction.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWellInteraction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GravityWellInteraction.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWellInteraction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GravityWellInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T05:38:31.885Z",
+              "WhenOpened": "2026-04-28T09:43:41.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GravityWellPreview.cs",
-              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWellPreview.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GravityWellPreview.cs",
-              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GravityWellPreview.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GravityWellPreview.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\Bullet.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet\\Bullet.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T10:13:45.799Z",
+              "WhenOpened": "2026-04-28T09:39:46.148Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CameraShaker.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\CameraShaker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraShaker.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\CameraShaker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraShaker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:00:36.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PickUpLogic.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\PickUpLogic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PickUpLogic.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\PickUpLogic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PickUpLogic.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T15:53:12.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ColliderChecker.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\ColliderChecker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\ColliderChecker.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\ColliderChecker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\ColliderChecker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:12:47.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GravityWellInteraction.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\GravityWellInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\GravityWellInteraction.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\GravityWellInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\GravityWellInteraction.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:51:04.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GunRotator.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\GunRotator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GunRotator.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\GunRotator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GunRotator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wCQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T11:45:44.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BulletMover.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\BulletMover.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletMover.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet\\BulletMover.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:35:01.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WallInteractor.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\WallInteractor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\WallInteractor.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\WallInteractor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\WallInteractor.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:36:24.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BulletLifeCycle.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet\\BulletLifeCycle.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:37:08.497Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DamageHandler.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\DamageHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\DamageHandler.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\DamageHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\DamageHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T16:23:08.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Gun.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Gun.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gun.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Gun.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gun.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T13:16:26.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "D:\\Git\\Gravity\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T09:50:14.092Z"
             }
           ]
         }

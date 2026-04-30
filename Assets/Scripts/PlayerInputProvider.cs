@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class PlayerInputProvider : MonoBehaviour
 {
@@ -10,17 +9,20 @@ public class PlayerInputProvider : MonoBehaviour
     private PlayerInput _input;
 
     public Vector2 MoveDirection => _input.Player.Move.ReadValue<Vector2>();
-    public Vector2 AimDirection => _input.Player.GravityWellAim.ReadValue<Vector2>();
+    public Vector2 AimDirection => _input.Player.Aim.ReadValue<Vector2>();
 
     public float RadiusChangeInput => _input.Player.ChangeRadius.ReadValue<float>();
 
-    public bool IsJumpPressed => _input.Player.Jump.IsPressed();
-    public bool IsPlaceGravityWellPressed => _input.Player.PlaceGravityWell.IsPressed();
+    public bool IsJumpHeld => _input.Player.Jump.IsPressed();
+    public bool IsCastAbilityHeld => _input.Player.CastAbility.IsPressed();
     public bool IsAimingWithStick => AimDirection.sqrMagnitude > 0.1f;
 
     public event Action JumpPressed;
     public event Action InvertGravityPressed;
     public event Action<bool> ShootPressed;
+    public event Action AbilityPressed;
+    public event Action AbilityRelesed;
+    public event Action InteractionPressed;
 
     private void Awake()
     {
@@ -33,14 +35,20 @@ public class PlayerInputProvider : MonoBehaviour
 
         _input.Player.Jump.performed += ctx => JumpPressed?.Invoke();
         _input.Player.InvertGravity.performed += ctx => InvertGravityPressed?.Invoke();
-        _input.Player.Shoot.performed += ctx => ShootPressed?.Invoke(IsPlaceGravityWellPressed);
+        _input.Player.Shoot.performed += ctx => ShootPressed?.Invoke(IsCastAbilityHeld);
+        _input.Player.Interaction.performed += ctx => InteractionPressed?.Invoke();
+        _input.Player.CastAbility.performed += ctx => AbilityPressed?.Invoke();
+        _input.Player.CastAbility.canceled += ctx => AbilityRelesed?.Invoke();
     }
 
     private void OnDisable()
     {
         _input.Player.Jump.performed -= ctx => JumpPressed?.Invoke();
         _input.Player.InvertGravity.performed -= ctx => InvertGravityPressed?.Invoke();
-        _input.Player.Shoot.performed -= ctx => ShootPressed?.Invoke(IsPlaceGravityWellPressed);
+        _input.Player.Shoot.performed -= ctx => ShootPressed?.Invoke(IsCastAbilityHeld);
+        _input.Player.Interaction.performed -= ctx => InteractionPressed?.Invoke();
+        _input.Player.CastAbility.performed -= ctx => AbilityPressed?.Invoke();
+        _input.Player.CastAbility.canceled -= ctx => AbilityRelesed?.Invoke();
 
         _input.Disable();
     }

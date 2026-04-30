@@ -11,6 +11,11 @@ public class ColliderChecker : MonoBehaviour
         return Physics2D.OverlapBox(transform.position, _size, 0f, _layers);
     }
 
+    public Collider2D GetObject()
+    {
+        return Physics2D.OverlapBox(transform.position, _size, 0f, _layers);
+    }
+
     private void OnDrawGizmos()
     {
         Handles.color = Color.red;
