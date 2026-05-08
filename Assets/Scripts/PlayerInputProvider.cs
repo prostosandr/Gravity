@@ -22,7 +22,9 @@ public class PlayerInputProvider : MonoBehaviour
     public event Action<bool> ShootPressed;
     public event Action AbilityPressed;
     public event Action AbilityRelesed;
+    public event Action Reloaded;
     public event Action InteractionPressed;
+    public event Action ThrowPressed;
 
     private void Awake()
     {
@@ -39,6 +41,8 @@ public class PlayerInputProvider : MonoBehaviour
         _input.Player.Interaction.performed += ctx => InteractionPressed?.Invoke();
         _input.Player.CastAbility.performed += ctx => AbilityPressed?.Invoke();
         _input.Player.CastAbility.canceled += ctx => AbilityRelesed?.Invoke();
+        _input.Player.Reload.performed += ctx => Reloaded?.Invoke();
+        _input.Player.Throw.performed += ctx => ThrowPressed?.Invoke();
     }
 
     private void OnDisable()
@@ -49,8 +53,24 @@ public class PlayerInputProvider : MonoBehaviour
         _input.Player.Interaction.performed -= ctx => InteractionPressed?.Invoke();
         _input.Player.CastAbility.performed -= ctx => AbilityPressed?.Invoke();
         _input.Player.CastAbility.canceled -= ctx => AbilityRelesed?.Invoke();
+        _input.Player.Reload.performed -= ctx => Reloaded?.Invoke();
+        _input.Player.Throw.performed -= ctx => ThrowPressed?.Invoke();
 
         _input.Disable();
+    }
+
+    public Vector2 GetAimDirection(Vector2 objectPosition)
+    {
+        if (IsAimingWithStick)
+        {
+            return AimDirection.normalized;
+        }
+        else
+        {
+            Vector2 mousePosition = GetCursorPosition();
+
+            return (mousePosition - objectPosition).normalized;
+        }
     }
 
     public Vector2 GetCursorPosition()

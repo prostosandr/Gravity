@@ -6,15 +6,15 @@ using UnityEngine;
 [RequireComponent(typeof(WallInteractor))]
 [RequireComponent(typeof(GravityInverter))]
 [RequireComponent(typeof(AbilityCaster))]
+[RequireComponent(typeof(Picker))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private PlayerConfig _config;
     [SerializeField] private PlayerInputProvider _input;
+    [SerializeField] private WeaponHandler _weaponHandler;
 
     [SerializeField] private ColliderChecker _groundChecker;
     [SerializeField] private ColliderChecker _wallChecker;
-
-    [SerializeField] private Gun _gun;
 
     private Mover _mover;
     private Jumper _jumper;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private WallInteractor _wallInteractor;
     private GravityInverter _gravityInverter;
     private AbilityCaster _caster;
-    private PickUpLogic _pickUpLogic;
+    private Picker _picker;
 
     private Rigidbody2D _rigidbody;
 
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         _wallInteractor = GetComponent<WallInteractor>();
         _gravityInverter = GetComponent<GravityInverter>();
         _caster = GetComponent<AbilityCaster>();
-        _pickUpLogic = GetComponent<PickUpLogic>();
+        _picker = GetComponent<Picker>();
     }
 
     private void OnEnable()
@@ -45,30 +45,24 @@ public class Player : MonoBehaviour
 
         _input.JumpPressed += OnJumpHandle;
         _input.InvertGravityPressed += OnGravityHandle;
-        _input.AbilityPressed += _caster.OnStartAbility;
-        _input.AbilityRelesed += _caster.OnCancelAbility;
+        _input.AbilityPressed += OnAbilityStartHandle;
+        _input.AbilityRelesed += OnAbilityCancelHandle;
         _input.ShootPressed += OnShootHandle;
+        _input.Reloaded += OnReloadHandle;
         _input.InteractionPressed += PickUpHandle;
-    }
+        _input.ThrowPressed += ThrowHandle;
 
-    private void OnDisable()
-    {
-        _input.JumpPressed -= OnJumpHandle;
-        _input.InvertGravityPressed -= OnGravityHandle;
-        _input.AbilityPressed -= _caster.OnStartAbility;
-        _input.AbilityRelesed -= _caster.OnCancelAbility;
-        _input.ShootPressed -= OnShootHandle;
-        _input.InteractionPressed -= PickUpHandle;
+        _gravityInverter.GravityInverted += _weaponHandler.OnGravityInvert;
     }
 
     private void Update()
     {
+        _weaponHandler.Rotate();
+        _weaponHandler.GunUpdate(); 
+
         if (_input.IsCastAbilityHeld)
         {
-            if (_input.IsAimingWithStick)
-                _caster.OnAimAbility(_input.AimDirection, true, _input.RadiusChangeInput);
-            else
-                _caster.OnAimAbility(_input.GetCursorPosition(), false, _input.RadiusChangeInput);
+            _caster.OnAimAbility(_input.GetAimDirection(transform.position), _input.RadiusChangeInput);
         }
     }
 
@@ -79,6 +73,23 @@ public class Player : MonoBehaviour
         MoveHandle();
 
         _jumper.ModifyFall(_input.IsJumpHeld, _wallInteractor.IsOnWall, _groundChecker.CheckCollider(), _gravityInverter.IsInverted);
+
+        if (_wallInteractor.IsOnWall == false && _wallInteractor.IsWallJumping == false)
+            _rotator.TurnForward(_input.GetAimDirection(transform.position), _gravityInverter.IsInverted);
+    }
+
+    private void OnDisable()
+    {
+        _input.JumpPressed -= OnJumpHandle;
+        _input.InvertGravityPressed -= OnGravityHandle;
+        _input.AbilityPressed -= OnAbilityStartHandle;
+        _input.AbilityRelesed -= OnAbilityCancelHandle;
+        _input.ShootPressed -= OnShootHandle;
+        _input.Reloaded -= OnReloadHandle;
+        _input.InteractionPressed -= PickUpHandle;
+        _input.ThrowPressed -= ThrowHandle;
+
+        _gravityInverter.GravityInverted -= _weaponHandler.OnGravityInvert;
     }
 
     private void Initialize()
@@ -86,7 +97,9 @@ public class Player : MonoBehaviour
         _mover.Initialize(_rigidbody, _config.Speed, _config.InterpolationSpeed);
         _jumper.Initialize(_rigidbody, _config.JumpForce, _config.FallForce, _config.JumpBrackingForce);
         _wallInteractor.Initialize(_rigidbody, _config.WallJumpForce, _config.WallSlideSpeed, _config.DelayAfterWalljump, _config.WallJumpVerticalBoost);
-        _caster.Initialize();
+        _gravityInverter.Initialize(_config.InvertCooldown);
+        _weaponHandler.Initialize();
+        _picker.Initialize(_config.ThrowPower);
     }
 
     private void MoveHandle()
@@ -94,7 +107,7 @@ public class Player : MonoBehaviour
         if (_wallInteractor.IsOnWall == false && _wallInteractor.IsWallJumping == false)
         {
             if (Mathf.Abs(_input.MoveDirection.x) > 0.1f)
-                _rotator.TurnForward(_input.MoveDirection.x, _gravityInverter.IsInverted);
+                _rotator.TurnForward(_input.GetAimDirection(transform.position), _gravityInverter.IsInverted);
 
             _mover.Move(_input.MoveDirection.x);
         }
@@ -108,14 +121,14 @@ public class Player : MonoBehaviour
         }
         else
         {
-            _rotator.TurnForward(-transform.right.x, _gravityInverter.IsInverted);
+            _rotator.TurnForward(-transform.right, _gravityInverter.IsInverted);
         }
     }
 
     private void OnGravityHandle()
     {
-        _gravityInverter.ToggleGravity(_input.MoveDirection.x);
-        _rotator.TurnForward(_input.MoveDirection.x, _gravityInverter.IsInverted);
+        _gravityInverter.ToggleGravity();
+        _rotator.TurnForward(_input.GetAimDirection(transform.position), _gravityInverter.IsInverted);
     }
 
     private void OnShootHandle(bool canPlaceGravityWell)
@@ -123,11 +136,31 @@ public class Player : MonoBehaviour
         if (canPlaceGravityWell)
             _caster.Cast(_input.IsCastAbilityHeld);
         else
-            _gun.Shoot();
+            _weaponHandler.Shoot();
+    }
+
+    private void OnAbilityStartHandle()
+    {
+        _caster.OnStartAbility();
+    }
+
+    private void OnAbilityCancelHandle()
+    {
+        _caster.OnCancelAbility();
+    }
+
+    private void OnReloadHandle()
+    {
+        _weaponHandler.Reload();
     }
 
     private void PickUpHandle()
     {
-        _pickUpLogic.PickUpObject();
+        _picker.InteractObject();
+    }
+
+    private void ThrowHandle()
+    {
+        _picker.Throw(_input.GetAimDirection(transform.position));
     }
 }

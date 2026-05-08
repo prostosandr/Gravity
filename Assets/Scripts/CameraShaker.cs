@@ -3,12 +3,23 @@ using UnityEngine;
 
 public class CameraShaker : MonoBehaviour
 {
+    [SerializeField] private Gun _gun;
     [SerializeField] private float _shakeDuration;
     [SerializeField] private float _shakeMagnitude;
 
     private Vector3 _originalPosition;
 
     private Coroutine _coroutine;
+
+    private void OnEnable()
+    {
+        _gun.Shooted += Shake;
+    }
+
+    private void OnDisable()
+    {
+        _gun.Shooted -= Shake;
+    }
 
     public void Shake()
     {

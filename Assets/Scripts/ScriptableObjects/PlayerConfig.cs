@@ -18,6 +18,12 @@ public class PlayerConfig : ScriptableObject
     [SerializeField] private float _delayAfterWallJump;
     [SerializeField] private float _wallJumpVerticalBoost;
 
+    [Header("GravityInverter")]
+    [SerializeField] private float _invertCooldown;
+
+    [Header("Picker")]
+    [SerializeField] private float _throwPower;
+
     public float Speed => _speed;
     public float InterpolationSpeed => _interpolationSpeed;
 
@@ -29,4 +35,8 @@ public class PlayerConfig : ScriptableObject
     public float WallSlideSpeed => _wallSlideSpeed;
     public float DelayAfterWalljump => _delayAfterWallJump;
     public float WallJumpVerticalBoost => _wallJumpVerticalBoost;
+
+    public float InvertCooldown => _invertCooldown;
+
+    public float ThrowPower => _throwPower;
 }

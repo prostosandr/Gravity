@@ -2,32 +2,25 @@ using UnityEngine;
 
 public class AbilityCaster : MonoBehaviour
 {
-    [SerializeField] private MonoBehaviour _ability;
-
-    IAbility _currentAbility;
-
-    public void Initialize()
-    {
-        _currentAbility = _ability as IAbility;
-    }
+    [SerializeField] private GravityWellInteraction _ability;
 
     public void Cast(bool isAbilityHeld)
     {
-        _currentAbility.Cast(isAbilityHeld);
+        _ability.Cast(isAbilityHeld);
     }
 
     public void OnStartAbility()
     {
-        _currentAbility.StartAbility();
+        _ability.StartAbility();
     }
 
-    public void OnAimAbility(Vector2 aim, bool isGamepad, float radius)
+    public void OnAimAbility(Vector2 directon, float radius)
     {
-        _currentAbility.AimAbility(aim, isGamepad, radius);
+        _ability.AimAbility(directon, radius);
     }
 
     public void OnCancelAbility()
     {
-        _currentAbility.CancelAbility();
+        _ability.CancelAbility();
     }
 }

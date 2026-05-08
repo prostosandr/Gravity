@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GravityWellInteraction : MonoBehaviour, IAbility
+public class GravityWellInteraction : MonoBehaviour
 {
     [SerializeField] private GravityWell _gravityWell;
     [SerializeField] private GravityWellPreview _gravityWellPreview;
@@ -26,9 +26,9 @@ public class GravityWellInteraction : MonoBehaviour, IAbility
         _aimLine.gameObject.SetActive(true);
     }
 
-    public void AimAbility(Vector2 aim, bool isGamepad, float radius)
+    public void AimAbility(Vector2 direction, float radius)
     {
-        UpdatePreview(aim, isGamepad, radius);
+        UpdatePreview(direction, radius);
     }
 
     public void CancelAbility()
@@ -37,18 +37,12 @@ public class GravityWellInteraction : MonoBehaviour, IAbility
         DeactivateAimLine();
     }
 
-    public void UpdatePreview(Vector2 input, bool isGamePad, float radiusInput)
+    public void UpdatePreview(Vector2 direction, float radiusInput)
     {
         _currentWidth += radiusInput * _changeSpeed * Time.deltaTime;
         _currentWidth = Mathf.Clamp(_currentWidth, _minWidth, _maxWidth);
 
         Vector2 orign = transform.position;
-        Vector2 direction;
-
-        if (isGamePad)
-            direction = input.normalized;
-        else
-            direction = (input - orign).normalized;
 
         RaycastHit2D hit = Physics2D.Raycast(orign, direction, _maxDistance, _hitLayers);
         
