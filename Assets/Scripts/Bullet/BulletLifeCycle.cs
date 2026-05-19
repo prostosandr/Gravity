@@ -22,6 +22,9 @@ public class BulletLifeCycle : MonoBehaviour
         if (collision.isTrigger)
             return;
 
+        if (collision.TryGetComponent(out IDamageable item))
+            item.TakeDamage(_damage);
+
         Deactivate();
     }
 

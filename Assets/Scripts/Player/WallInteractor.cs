@@ -29,29 +29,22 @@ public class WallInteractor : MonoBehaviour
         _wait = new WaitForSeconds(_delayAfterWallJump);
     }
 
-    public void HandleWallSlide(bool isInverted, bool touchingWall, bool touchingGround)
+    public void HandleWallSlide(bool touchingWall, bool touchingGround, GravityDirection gravityDirection)
     {
         if (_isWallJumping)
             return;
 
         if (touchingWall && touchingGround == false)
         {
-            if (_isOnWall == false)
-            {
-                _rigidbody.linearVelocity = Vector2.zero;
-                _isOnWall = true;
-            }
+            _isOnWall = true;
 
-            float gravityDirection = Mathf.Sign(Physics2D.gravity.y);
+            Vector2 rightAxis = GravityUtils.GetRightAxis(gravityDirection);
+            Vector2 upAxis = GravityUtils.GetUpAxis(gravityDirection);
 
-            bool isMovingWithGravity = Mathf.Sign(_rigidbody.linearVelocityY) == gravityDirection;
+            float currentHoriz = Vector2.Dot(_rigidbody.linearVelocity, rightAxis);
+            Vector2 slideVec = -upAxis * _wallSlideSpeed;
 
-            if (isMovingWithGravity || Mathf.Abs(_rigidbody.linearVelocityY) < 0.1f)
-                _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocityX, gravityDirection * _wallSlideSpeed);
-            else
-            {
-                _isOnWall = false;
-            }
+            _rigidbody.linearVelocity = rightAxis * currentHoriz + slideVec;
         }
         else
         {
@@ -59,20 +52,20 @@ public class WallInteractor : MonoBehaviour
         }
     }
 
-    public bool TryWallJump(bool isInverted)
+    public bool TryWallJump(GravityDirection gravityDirecition)
     {
         if (_isOnWall == false)
             return false;
 
+        Vector2 upAxis = GravityUtils.GetUpAxis(gravityDirecition);
         Vector2 directionAgainstWall = (Vector2)(-transform.right);
 
-        Vector2 jumpDirection = ((Vector2)transform.up * _wallJumpVerticalBoost + directionAgainstWall).normalized;
+        Vector2 jumpDirection = (upAxis * _wallJumpVerticalBoost + directionAgainstWall).normalized;
 
         _rigidbody.linearVelocity = Vector2.zero;
         _rigidbody.AddForce(jumpDirection * _wallJumpForce, ForceMode2D.Impulse);
 
         StartCoroutine(WallJumpRoutine());
-
         return true;
     }
 

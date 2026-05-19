@@ -26,6 +26,10 @@ public class PlayerInputProvider : MonoBehaviour
     public event Action InteractionPressed;
     public event Action ThrowPressed;
 
+    public event Action LeftGravityPressed;
+    public event Action RightGravityPressed;
+    public event Action ZeroGravityPressed;
+
     private void Awake()
     {
         _input = new PlayerInput();
@@ -43,6 +47,10 @@ public class PlayerInputProvider : MonoBehaviour
         _input.Player.CastAbility.canceled += ctx => AbilityRelesed?.Invoke();
         _input.Player.Reload.performed += ctx => Reloaded?.Invoke();
         _input.Player.Throw.performed += ctx => ThrowPressed?.Invoke();
+
+        _input.Player.GravityLeft.performed += ctx => LeftGravityPressed?.Invoke();
+        _input.Player.GraivtyRight.performed += ctx => RightGravityPressed?.Invoke();
+        _input.Player.ZeroGravity.performed += ctx => ZeroGravityPressed?.Invoke();
     }
 
     private void OnDisable()
@@ -55,6 +63,10 @@ public class PlayerInputProvider : MonoBehaviour
         _input.Player.CastAbility.canceled -= ctx => AbilityRelesed?.Invoke();
         _input.Player.Reload.performed -= ctx => Reloaded?.Invoke();
         _input.Player.Throw.performed -= ctx => ThrowPressed?.Invoke();
+
+        _input.Player.GravityLeft.performed -= ctx => LeftGravityPressed?.Invoke();
+        _input.Player.GraivtyRight.performed -= ctx => RightGravityPressed?.Invoke();
+        _input.Player.ZeroGravity.performed -= ctx => ZeroGravityPressed?.Invoke();
 
         _input.Disable();
     }

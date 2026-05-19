@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeaponHandlerRotator : MonoBehaviour
 {
-    public void Rotate(bool isGravityInverted, Vector2 aimDirection)
+    public void Rotate(GravityDirection gravityDirection, Vector2 aimDirection)
     {
         if (aimDirection.sqrMagnitude > 0.01f)
         {
@@ -10,23 +10,26 @@ public class WeaponHandlerRotator : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0, 0, angle);
 
-            Flip(angle, isGravityInverted);
+            Flip(gravityDirection, aimDirection);
         }
     }
 
-    private void Flip(float angle, bool isGravityInverted)
+    private void Flip(GravityDirection gravityDirection, Vector2 aimDirection)
     {
-        if (angle > 90 || angle < -90)
-            transform.localScale = new Vector2(1, -1);
-        else
-            transform.localScale = new Vector2(1, 1);
+        Vector2 rightAxis = GravityUtils.GetRightAxis(gravityDirection);
+        float forwardDot = Vector2.Dot(aimDirection, rightAxis);
 
-        if (isGravityInverted)
+        Vector3 scale = transform.localScale;
+
+        if (forwardDot < 0)
         {
-            Vector2 newLocalScale = transform.localScale;
-
-            newLocalScale.y = -newLocalScale.y;
-            transform.localScale = newLocalScale;
+            scale.y = -1f;
         }
+        else
+        {
+            scale.y = 1f;
+        }
+
+        transform.localScale = scale;
     }
 }

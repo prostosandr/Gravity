@@ -8,41 +8,44 @@ public class Jumper : MonoBehaviour
     private float _fallForce;
     private float _jumpBrakingForce;
 
-    public void Initialize(Rigidbody2D rigidbody, float jumpForce, float fallForce, float jumoBrakingForce)
+    public void Initialize(Rigidbody2D rigidbody, float jumpForce, float fallForce, float jumpBrakingForce)
     {
         _rigidbody = rigidbody;
         _jumpForce = jumpForce;
         _fallForce = fallForce;
-        _jumpBrakingForce = jumoBrakingForce;
+        _jumpBrakingForce = jumpBrakingForce;
     }
 
-    public void TryJump(bool isGround)
+    public void Jump(bool isGround, GravityDirection gravityDirection)
     {
         if (isGround == false)
             return;
 
-        _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocityX, 0);
-        _rigidbody.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
+        Vector2 rightAxis = GravityUtils.GetRightAxis(gravityDirection);
+        Vector2 upAxis = GravityUtils.GetUpAxis(gravityDirection);
 
+        float horizontalVelocity = Vector2.Dot(_rigidbody.linearVelocity, rightAxis);
+        _rigidbody.linearVelocity = rightAxis * horizontalVelocity;
+
+        _rigidbody.AddForce(upAxis * _jumpForce, ForceMode2D.Impulse);
     }
 
-    public void ModifyFall(bool isJumpPressed, bool onWall, bool isGround, bool isGravityInverted)
+    public void ModifyFall(bool isJumpPressed, bool onWall, bool isGround, GravityDirection gravityDirection)
     {
         if (onWall || isGround)
             return;
 
-        bool isFalling = Mathf.Sign(_rigidbody.linearVelocityY) == Mathf.Sign(Physics2D.gravity.y);
+        Vector2 upAxis = GravityUtils.GetUpAxis(gravityDirection);
+        float verticalVelocity = Vector2.Dot(_rigidbody.linearVelocity, upAxis);
 
-        if (isFalling)
-            Jump(_fallForce);
-        else if (isFalling == false && isJumpPressed == false)
-            Jump(_jumpBrakingForce);
+        if (verticalVelocity < 0)
+            ApplyGravityBonus(_fallForce);
+        else if (verticalVelocity > 0 && isJumpPressed == false)
+            ApplyGravityBonus(_jumpBrakingForce);
     }
 
-    private void Jump(float force)
+    private void ApplyGravityBonus(float multiplier)
     {
-        float gravityDirection = Mathf.Sign(Physics2D.gravity.y);
-
-        _rigidbody.linearVelocity += Vector2.up * gravityDirection * Mathf.Abs(Physics2D.gravity.y) * force * Time.fixedDeltaTime;
+        _rigidbody.linearVelocity += Physics2D.gravity * multiplier * Time.fixedDeltaTime;
     }
 }

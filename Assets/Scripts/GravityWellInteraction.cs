@@ -45,7 +45,7 @@ public class GravityWellInteraction : MonoBehaviour
         Vector2 orign = transform.position;
 
         RaycastHit2D hit = Physics2D.Raycast(orign, direction, _maxDistance, _hitLayers);
-        
+
         _aimLine.SetPosition(0, orign);
 
         if (hit.collider != null)
@@ -92,6 +92,8 @@ public class GravityWellInteraction : MonoBehaviour
             _gravityWell.transform.position = _currentHitPosition;
             _gravityWell.transform.rotation = _currentRotation;
             _gravityWell.Initialize(_currentWidth);
+
+            _gravityWell.StartAnimation();
         }
     }
 }

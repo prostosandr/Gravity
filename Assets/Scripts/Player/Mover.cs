@@ -14,9 +14,16 @@ public class Mover : MonoBehaviour
         _interpolationSpeed = interpolationSpeed;
     }
 
-    public void Move(float direction)
+    public void Move(Vector2 moveDirection, GravityDirection gravityDirection)
     {
-        float newVelocityX = Mathf.Lerp(_rigidbody.linearVelocityX, direction * _speed, Time.deltaTime * _interpolationSpeed);
-        _rigidbody.linearVelocity = new Vector2(newVelocityX, _rigidbody.linearVelocityY);
+        Vector2 rightAxis = GravityUtils.GetRightAxis(gravityDirection);
+
+        float desiredSpeed = Vector2.Dot(moveDirection, rightAxis) * _speed;
+
+        float currentHorizontalVelocity = Vector2.Dot(_rigidbody.linearVelocity, rightAxis);
+        float newHorizontalVelocity = Mathf.Lerp(currentHorizontalVelocity, desiredSpeed, Time.deltaTime * _interpolationSpeed);
+        float velocityDelta = newHorizontalVelocity - currentHorizontalVelocity;
+
+        _rigidbody.linearVelocity += rightAxis * velocityDelta;
     }
 }

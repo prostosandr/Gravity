@@ -95,12 +95,39 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "GraivtyRight",
+                    "type": "Button",
+                    "id": "cb77278d-2f68-4f96-8dd9-ca58b45dce7c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GravityLeft",
+                    "type": "Button",
+                    "id": "4d47f5c6-d8cc-4603-8e20-9545fa7975e5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZeroGravity",
+                    "type": "Button",
+                    "id": "c58a0a22-8764-4310-b204-235794fae799",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "caa57c6b-c240-4404-a033-afebccd866c5",
+                    "id": "1daa27bf-810c-44fc-b0b6-e9ab52f5f92c",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -110,8 +137,30 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "up",
+                    "id": "bb08363e-4f9f-4f1e-88d1-6bd9815c9b64",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d4d4b1bf-2289-4d75-8589-ad252a683992",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "left",
-                    "id": "63ea65d5-5f4e-4325-9049-7755cfa09fba",
+                    "id": "8dc0f8d5-7d13-4e36-acbf-db3285454cb5",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -122,7 +171,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "f36f6ca9-3f9b-420d-8373-6713b8909ae0",
+                    "id": "228d96a7-9fa8-4fd7-9a25-9cfe2588e546",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -370,6 +419,39 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da962135-24c7-44e1-89f5-59792f76b69a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "GraivtyRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e9404e5-b088-42b8-bf78-0e79737921e6",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "GravityLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f94ea3c-4379-47ce-869e-57ff13ceee44",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard and Mosue",
+                    "action": "ZeroGravity",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

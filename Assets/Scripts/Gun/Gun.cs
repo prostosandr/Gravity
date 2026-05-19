@@ -24,14 +24,19 @@ public class Gun : MonoBehaviour
     public event Action<int, int> AmmoChanged;
     public event Action<float> ReloadStarted;
 
-    public void Initialize()
+    public bool CanShoot => _magazine.IsMagazineEmpty == false && _reloader.IsReload == false;
+
+    private void Awake()
     {
         _spawner = GetComponent<BulletSpawner>();
         _reloader = GetComponent<GunReloader>();
         _magazine = GetComponent<GunMagazine>();
         _flash = GetComponent<GunMuzzleFlash>();
         _recoil = GetComponent<GunRecoil>();
+    }
 
+    public void Initialize()
+    {
         _reloader.Initialize(_reloadTime);
         _magazine.Initialize(_magazineCapacity);
         _flash.Initialize(_flashTime);

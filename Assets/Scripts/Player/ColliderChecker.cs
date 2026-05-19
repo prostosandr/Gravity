@@ -8,17 +8,22 @@ public class ColliderChecker : MonoBehaviour
 
     public bool CheckCollider()
     {
-        return Physics2D.OverlapBox(transform.position, _size, 0f, _layers);
+        return Physics2D.OverlapBox(transform.position, _size, transform.eulerAngles.z, _layers);
     }
 
     public Collider2D GetObject()
     {
-        return Physics2D.OverlapBox(transform.position, _size, 0f, _layers);
+        return Physics2D.OverlapBox(transform.position, _size, transform.eulerAngles.z, _layers);
     }
 
     private void OnDrawGizmos()
     {
         Handles.color = Color.red;
-        Handles.DrawWireCube(transform.position, _size);
+        Matrix4x4 rotationMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.localScale);
+
+        using (new Handles.DrawingScope(rotationMatrix))
+        {
+            Handles.DrawWireCube(Vector3.zero, _size);
+        }
     }
 }

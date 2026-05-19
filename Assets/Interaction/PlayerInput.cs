@@ -181,12 +181,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GraivtyRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""cb77278d-2f68-4f96-8dd9-ca58b45dce7c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GravityLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d47f5c6-d8cc-4603-8e20-9545fa7975e5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZeroGravity"",
+                    ""type"": ""Button"",
+                    ""id"": ""c58a0a22-8764-4310-b204-235794fae799"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""caa57c6b-c240-4404-a033-afebccd866c5"",
+                    ""id"": ""1daa27bf-810c-44fc-b0b6-e9ab52f5f92c"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -196,8 +223,30 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""up"",
+                    ""id"": ""bb08363e-4f9f-4f1e-88d1-6bd9815c9b64"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d4d4b1bf-2289-4d75-8589-ad252a683992"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""left"",
-                    ""id"": ""63ea65d5-5f4e-4325-9049-7755cfa09fba"",
+                    ""id"": ""8dc0f8d5-7d13-4e36-acbf-db3285454cb5"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -208,7 +257,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""f36f6ca9-3f9b-420d-8373-6713b8909ae0"",
+                    ""id"": ""228d96a7-9fa8-4fd7-9a25-9cfe2588e546"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -458,6 +507,39 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Throw"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da962135-24c7-44e1-89f5-59792f76b69a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""GraivtyRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e9404e5-b088-42b8-bf78-0e79737921e6"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""GravityLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f94ea3c-4379-47ce-869e-57ff13ceee44"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mosue"",
+                    ""action"": ""ZeroGravity"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -504,6 +586,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
         m_Player_Reload = m_Player.FindAction("Reload", throwIfNotFound: true);
         m_Player_Throw = m_Player.FindAction("Throw", throwIfNotFound: true);
+        m_Player_GraivtyRight = m_Player.FindAction("GraivtyRight", throwIfNotFound: true);
+        m_Player_GravityLeft = m_Player.FindAction("GravityLeft", throwIfNotFound: true);
+        m_Player_ZeroGravity = m_Player.FindAction("ZeroGravity", throwIfNotFound: true);
     }
 
     ~@PlayerInput()
@@ -594,6 +679,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interaction;
     private readonly InputAction m_Player_Reload;
     private readonly InputAction m_Player_Throw;
+    private readonly InputAction m_Player_GraivtyRight;
+    private readonly InputAction m_Player_GravityLeft;
+    private readonly InputAction m_Player_ZeroGravity;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -645,6 +733,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Throw".
         /// </summary>
         public InputAction @Throw => m_Wrapper.m_Player_Throw;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/GraivtyRight".
+        /// </summary>
+        public InputAction @GraivtyRight => m_Wrapper.m_Player_GraivtyRight;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/GravityLeft".
+        /// </summary>
+        public InputAction @GravityLeft => m_Wrapper.m_Player_GravityLeft;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ZeroGravity".
+        /// </summary>
+        public InputAction @ZeroGravity => m_Wrapper.m_Player_ZeroGravity;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -701,6 +801,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Throw.started += instance.OnThrow;
             @Throw.performed += instance.OnThrow;
             @Throw.canceled += instance.OnThrow;
+            @GraivtyRight.started += instance.OnGraivtyRight;
+            @GraivtyRight.performed += instance.OnGraivtyRight;
+            @GraivtyRight.canceled += instance.OnGraivtyRight;
+            @GravityLeft.started += instance.OnGravityLeft;
+            @GravityLeft.performed += instance.OnGravityLeft;
+            @GravityLeft.canceled += instance.OnGravityLeft;
+            @ZeroGravity.started += instance.OnZeroGravity;
+            @ZeroGravity.performed += instance.OnZeroGravity;
+            @ZeroGravity.canceled += instance.OnZeroGravity;
         }
 
         /// <summary>
@@ -742,6 +851,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Throw.started -= instance.OnThrow;
             @Throw.performed -= instance.OnThrow;
             @Throw.canceled -= instance.OnThrow;
+            @GraivtyRight.started -= instance.OnGraivtyRight;
+            @GraivtyRight.performed -= instance.OnGraivtyRight;
+            @GraivtyRight.canceled -= instance.OnGraivtyRight;
+            @GravityLeft.started -= instance.OnGravityLeft;
+            @GravityLeft.performed -= instance.OnGravityLeft;
+            @GravityLeft.canceled -= instance.OnGravityLeft;
+            @ZeroGravity.started -= instance.OnZeroGravity;
+            @ZeroGravity.performed -= instance.OnZeroGravity;
+            @ZeroGravity.canceled -= instance.OnZeroGravity;
         }
 
         /// <summary>
@@ -878,5 +996,26 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnThrow(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "GraivtyRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGraivtyRight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "GravityLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGravityLeft(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ZeroGravity" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnZeroGravity(InputAction.CallbackContext context);
     }
 }

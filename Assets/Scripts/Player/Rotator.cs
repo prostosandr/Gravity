@@ -2,21 +2,34 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    private const float RightLookAngle = 0;
-    private const float LeftLookAngle = 180;
-    private const float NormalGravityAngle = 0;
-    private const float InvertedGravityAngle = 180;
+    private const float RightLook = 0;
+    private const float LeftLook = 180;
 
-    public void TurnForward(Vector2 direction, bool isInvertedGravity)
+    private float _currentGravityAngle;
+
+    public void AlignToGravity(GravityDirection direction)
     {
-        float angleZ = isInvertedGravity ? InvertedGravityAngle : NormalGravityAngle;
-        float angleY = transform.eulerAngles.y;
+        _currentGravityAngle = GravityUtils.GetRotationAngle(direction);
+        ApplyRotation(transform.eulerAngles.y);
+    }
 
-        if (direction.x > 0)
-            angleY = isInvertedGravity ? LeftLookAngle : RightLookAngle;
-        else if (direction.x < 0)
-            angleY = isInvertedGravity ? RightLookAngle : LeftLookAngle;
+    public void TurnForward(Vector2 aimDirection, GravityDirection gravityDirection)
+    {
+        Vector2 rightAxis = GravityUtils.GetRightAxis(gravityDirection);
 
-        transform.rotation = Quaternion.Euler(0, angleY, angleZ);
+        float forwardDot = Vector2.Dot(aimDirection, rightAxis);
+
+        if (forwardDot >= 0)
+            ApplyRotation(RightLook);
+        else
+            ApplyRotation(LeftLook);
+    }
+
+    private void ApplyRotation(float angleY)
+    {
+        Quaternion gravityRot = Quaternion.Euler(0, 0, _currentGravityAngle);
+        Quaternion lookRot = Quaternion.Euler(0, angleY, 0);
+
+        transform.rotation = gravityRot * lookRot;
     }
 }

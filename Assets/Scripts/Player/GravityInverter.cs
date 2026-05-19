@@ -1,57 +1,47 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GravityInverter : MonoBehaviour
 {
+    private Gravity _gravity;
+
     private WaitForSeconds _wait;
     private Coroutine _coroutine;
 
     private float _cooldown;
 
-    private bool _isInverted;
-    private bool _canInvert;
+    public GravityDirection CurrentDirection => _gravity.CurrentDirection;
 
-    public bool IsInverted => _isInverted;
-
-    public event Action<bool> GravityInverted;
+    public event Action GravityInvertCompleted;
+    public event Action<GravityDirection> GravityChanged;
     public event Action<float> CooldownStarted;
 
-    public void Initialize(float cooldown)
+    public void Initialize(Gravity gravity,float cooldown)
     {
+        _gravity = gravity;
         _cooldown = cooldown;
 
         _wait = new WaitForSeconds(_cooldown);
-
-        _canInvert = true;
-        _isInverted = false;
     }
 
-    public void ToggleGravity()
+    public void ChangeGravity(GravityDirection direction)
     {
-        if (_canInvert == false)
-            return;
-
-        _canInvert = false;
-
-        _isInverted = !_isInverted;
-
-        Physics2D.gravity = -Physics2D.gravity;
-
-        GravityInverted?.Invoke(_isInverted);
+        _gravity.SetGravityDirection(direction);
 
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
         _coroutine = StartCoroutine(CooldownRoutine());
+
         CooldownStarted?.Invoke(_cooldown);
+        GravityChanged?.Invoke(direction);
     }
 
     private IEnumerator CooldownRoutine()
     {
         yield return _wait;
 
-        _canInvert = true;
+        GravityInvertCompleted?.Invoke();
     }
 }

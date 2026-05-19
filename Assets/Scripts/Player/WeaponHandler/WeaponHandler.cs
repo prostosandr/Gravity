@@ -1,26 +1,23 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(WeaponHandlerRotator))]
 public class WeaponHandler : MonoBehaviour
 {
     [SerializeField] private Gun _gun;
-    [SerializeField] private PlayerInputProvider _input;
 
     private WeaponHandlerRotator _aimer;
 
-    private bool _isGravityInverted;
+    private GravityDirection _currentGravity = GravityDirection.Down;
 
     public void Initialize()
     {
         _aimer = GetComponent<WeaponHandlerRotator>();
-
         _gun.Initialize();
     }
 
-    public void Rotate()
+    public void Rotate(Vector2 aiDirection)
     {
-        _aimer.Rotate(_isGravityInverted, _input.GetAimDirection(transform.position));
+        _aimer.Rotate(_currentGravity, aiDirection);
     }
 
     public void Shoot()
@@ -33,16 +30,16 @@ public class WeaponHandler : MonoBehaviour
         _gun.Reload();
     }
 
-    public void OnGravityInvert(bool isGravityInverted)
+    public void OnGravityChanged(GravityDirection gravityDirection)
     {
-        _isGravityInverted = isGravityInverted;
+        _currentGravity = gravityDirection;
     }
 
     public void GunUpdate()
     {
         _gun.UpdateRecoil();
     }
-    
+
     public void Activate()
     {
         gameObject.SetActive(false);

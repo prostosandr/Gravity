@@ -1,14 +1,13 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class DamageHandler : MonoBehaviour
+public class OvverheadKickChecker : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer _blood;
     [SerializeField] private float _crushMassTreshold;
     [SerializeField] private LayerMask _layer;
     [SerializeField] private float _rayDistance;
     [SerializeField] private float _hitDistance;
-
+    [SerializeField] private Health _health;
 
     private void FixedUpdate()
     {
@@ -20,16 +19,10 @@ public class DamageHandler : MonoBehaviour
         {
             if (hit.rigidbody.mass >= _crushMassTreshold && hit.distance < _hitDistance)
             {
-                Die();
+                _health.Die();
             }
         }
     }
 
-    private void Die()
-    {
-        _blood.transform.SetParent(null);
-        _blood.gameObject.SetActive(true);
-
-        gameObject.SetActive(false);
-    }
+    
 }

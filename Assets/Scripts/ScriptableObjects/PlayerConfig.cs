@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = nameof(PlayerConfig), menuName = Constants.PlayerMenuName + nameof(PlayerConfig))]
+[CreateAssetMenu(fileName = nameof(PlayerConfig), menuName = Constants.ConfigsMenus.PlayerMenuName + nameof(PlayerConfig))]
 public class PlayerConfig : ScriptableObject
 {
     [Header("Movement")]
@@ -24,6 +24,9 @@ public class PlayerConfig : ScriptableObject
     [Header("Picker")]
     [SerializeField] private float _throwPower;
 
+    [Header("Health")]
+    [SerializeField] private float _maxHealth;
+
     public float Speed => _speed;
     public float InterpolationSpeed => _interpolationSpeed;
 
@@ -39,4 +42,6 @@ public class PlayerConfig : ScriptableObject
     public float InvertCooldown => _invertCooldown;
 
     public float ThrowPower => _throwPower;
+
+    public float MaxHealth => _maxHealth;
 }
