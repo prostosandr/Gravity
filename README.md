@@ -10,23 +10,22 @@
 **1. Инверсия гравитации**
 Способность мгновенно менять вектор падения. Открывает простор для нестандартного платформинга, обхода смертельных ловушек и перемещения по потолку.
 
-<img width="800" height="595" alt="Gravity1-ezgif com-gif-to-webp-converter_11zon" src="https://github.com/user-attachments/assets/67ab7c8a-78d7-43ed-989b-66224a7167d3" />
 
 **2. Гравитационные колодцы (Gravity Wells)**
 Локальные зоны с измененным притяжением. Игрок может использовать эти поля, чтобы менять плоскость движения на лету или применять физическую инерцию для катапультирования на дальние расстояния.
 
-![Gravity Wells Interaction](https://drive.google.com/uc?export=view&id=XrDWQ5ttc7-XNAUdv9U6ssDVU1aBn7FZ)
+<img width="800" height="595" alt="Gravity2" src="https://github.com/user-attachments/assets/00bd80c9-f4f5-4837-9b3d-08b033b91d60" />
 
 **3. Хардкорный дизайн уровней**
 Локации требуют высокой точности, микроконтроля, быстрого чтения таймингов и понимания физики движения. Цена ошибки высока, но механики работают предсказуемо и отзывчиво.
 
-![Hardcore Platforming](https://drive.google.com/uc?export=view&id=19X2hP9KhASpPMBaze-zo1M5uPRi0l2la)
+
 
 <details>
 <summary><b>🎬 Развернуть галерею геймплея (Еще 4 гифки)</b></summary>
 <br>
   
-<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/13237c2a-8bbd-4ab5-8142-825d38a23651" />
+<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/0276a8e3-6422-43a3-a32e-b3a1de6cb827" />
 
 ![Gameplay 5](https://drive.google.com/uc?export=view&id=192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_)
 ![Gameplay 6](https://drive.google.com/uc?export=view&id=dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx)
