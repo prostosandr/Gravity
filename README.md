@@ -1,7 +1,5 @@
 # 🌌 Gravity: Puzzle Platformer
-
-<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/13237c2a-8bbd-4ab5-8142-825d38a23651" />
-
+<img width="800" height="595" alt="Gravity-ezgif com-gif-to-webp-converter" src="https://github.com/user-attachments/assets/9e05db76-80de-4b62-b7d0-4c62aa29f09d" />
 
 **Gravity** — это хардкорный 2D-платформер, построенный на пространственных головоломках и управлении физикой. Главная особенность игры — манипуляция вектором гравитации, позволяющая перемещаться по стенам, потолкам и использовать инерцию для преодоления препятствий.
 
@@ -12,7 +10,7 @@
 **1. Инверсия гравитации**
 Способность мгновенно менять вектор падения. Открывает простор для нестандартного платформинга, обхода смертельных ловушек и перемещения по потолку.
 
-![Gravity Inversion](https://drive.google.com/uc?export=view&id=Exgr6PvWHt_UI8rpHVObZt_zeeBS5EoX)
+<img width="800" height="595" alt="Gravity1-ezgif com-gif-to-webp-converter_11zon" src="https://github.com/user-attachments/assets/67ab7c8a-78d7-43ed-989b-66224a7167d3" />
 
 **2. Гравитационные колодцы (Gravity Wells)**
 Локальные зоны с измененным притяжением. Игрок может использовать эти поля, чтобы менять плоскость движения на лету или применять физическую инерцию для катапультирования на дальние расстояния.
@@ -28,7 +26,8 @@
 <summary><b>🎬 Развернуть галерею геймплея (Еще 4 гифки)</b></summary>
 <br>
   
-![Gameplay 4](https://drive.google.com/uc?export=view&id=NKn2QN0kZzFDYfaGio13KSZGrkCJdF3W)
+<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/13237c2a-8bbd-4ab5-8142-825d38a23651" />
+
 ![Gameplay 5](https://drive.google.com/uc?export=view&id=192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_)
 ![Gameplay 6](https://drive.google.com/uc?export=view&id=dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx)
 ![Gameplay 7](https://drive.google.com/uc?export=view&id=MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07)
