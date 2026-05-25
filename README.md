@@ -1,4 +1,4 @@
-# 🌌 Gravity: Puzzle Platformer
+<img width="800" height="595" alt="Gravity1" src="https://github.com/user-attachments/assets/2969ddd0-9e62-4801-bf0d-1bd0494b3268" /># 🌌 Gravity: Puzzle Platformer
 <img width="800" height="595" alt="Gravity-ezgif com-gif-to-webp-converter" src="https://github.com/user-attachments/assets/9e05db76-80de-4b62-b7d0-4c62aa29f09d" />
 
 **Gravity** — это хардкорный 2D-платформер, построенный на пространственных головоломках и управлении физикой. Главная особенность игры — манипуляция вектором гравитации, позволяющая перемещаться по стенам, потолкам и использовать инерцию для преодоления препятствий.
@@ -10,6 +10,7 @@
 **1. Инверсия гравитации**
 Способность мгновенно менять вектор падения. Открывает простор для нестандартного платформинга, обхода смертельных ловушек и перемещения по потолку.
 
+ <img width="800" height="595" alt="Gravity1" src="https://github.com/user-attachments/assets/ad472564-a501-463f-8831-bddc3175d3be" />
 
 **2. Гравитационные колодцы (Gravity Wells)**
 Локальные зоны с измененным притяжением. Игрок может использовать эти поля, чтобы менять плоскость движения на лету или применять физическую инерцию для катапультирования на дальние расстояния.
@@ -24,13 +25,10 @@
 <details>
 <summary><b>🎬 Развернуть галерею геймплея (Еще 4 гифки)</b></summary>
 <br>
-  
-<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/0276a8e3-6422-43a3-a32e-b3a1de6cb827" />
-
-![Gameplay 5](https://drive.google.com/uc?export=view&id=192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_)
-![Gameplay 6](https://drive.google.com/uc?export=view&id=dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx)
-![Gameplay 7](https://drive.google.com/uc?export=view&id=MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07)
-
+https://github.com/user-attachments/assets/672eac26-d26a-43f4-a248-b50dc4c48481
+https://github.com/user-attachments/assets/5acc636c-5044-4ccd-89d8-6d6c83b01779
+https://github.com/user-attachments/assets/22350cec-1200-4ec9-ac9d-55bfdf7ce96a
+https://github.com/user-attachments/assets/08d34b1e-d363-4ab0-8752-16d787dcd8bb
 </details>
 
 ---
