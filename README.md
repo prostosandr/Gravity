@@ -1,6 +1,6 @@
 # 🌌 Gravity: Puzzle Platformer
 
-[![Gameplay Showcase](Gravity.gif)](https://drive.google.com/file/d/16YKC-OFHCLfgSbXpWjiEQchynn5krm7M/view?usp=drive_link)
+![Gameplay Showcase](https://drive.google.com/uc?export=view&id=16YKC-OFHCLfgSbXpWjiEQchynn5krm7M)
 
 **Gravity** — это хардкорный 2D-платформер, построенный на пространственных головоломках и управлении физикой. Главная особенность игры — манипуляция вектором гравитации, позволяющая перемещаться по стенам, потолкам и использовать инерцию для преодоления препятствий.
 
@@ -11,28 +11,28 @@
 **1. Инверсия гравитации**
 Способность мгновенно менять вектор падения. Открывает простор для нестандартного платформинга, обхода смертельных ловушек и перемещения по потолку.
 
-[![Gravity Inversion](Gravity1.gif)](https://drive.google.com/file/d/1Exgr6PvWHt_UI8rpHVObZt_zeeBS5EoX/view?usp=drive_link)
+![Gravity Inversion](https://drive.google.com/uc?export=view&id=Exgr6PvWHt_UI8rpHVObZt_zeeBS5EoX)
 
 **2. Гравитационные колодцы (Gravity Wells)**
 Локальные зоны с измененным притяжением. Игрок может использовать эти поля, чтобы менять плоскость движения на лету или применять физическую инерцию для катапультирования на дальние расстояния.
 
-[![Gravity Wells Interaction](Gravity2.gif)](https://drive.google.com/file/d/1XrDWQ5ttc7-XNAUdv9U6ssDVU1aBn7FZ/view?usp=drive_link)
+![Gravity Wells Interaction](https://drive.google.com/uc?export=view&id=XrDWQ5ttc7-XNAUdv9U6ssDVU1aBn7FZ)
 
 **3. Хардкорный дизайн уровней**
 Локации требуют высокой точности, микроконтроля, быстрого чтения таймингов и понимания физики движения. Цена ошибки высока, но механики работают предсказуемо и отзывчиво.
 
-[![Hardcore Platforming](Gravity3.gif)](https://drive.google.com/file/d/19X2hP9KhASpPMBaze-zo1M5uPRi0l2la/view?usp=drive_link)
+![Hardcore Platforming](https://drive.google.com/uc?export=view&id=19X2hP9KhASpPMBaze-zo1M5uPRi0l2la)
 
 <details>
-<summary><b>🎬 Развернуть галерею геймплея</b></summary>
+<summary><b>🎬 Развернуть галерею геймплея (Еще 4 гифки)</b></summary>
 <br>
   
-[![Gameplay 4](Gravity4.gif)](https://drive.google.com/file/d/1NKn2QN0kZzFDYfaGio13KSZGrkCJdF3W/view?usp=drive_link)
-[![Gameplay 5](Gravity5.gif)](https://drive.google.com/file/d/192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_/view?usp=drive_link)
-![Gameplay 6](Gravity6.gif)[
-](https://drive.google.com/file/d/1dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx/view?usp=drive_link)
+![Gameplay 4](https://drive.google.com/uc?export=view&id=NKn2QN0kZzFDYfaGio13KSZGrkCJdF3W)
+![Gameplay 5](https://drive.google.com/uc?export=view&id=192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_)
+![Gameplay 6](https://drive.google.com/uc?export=view&id=dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx)
+![Gameplay 7](https://drive.google.com/uc?export=view&id=MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07)
+
 </details>
-https://drive.google.com/file/d/1MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07/view?usp=drive_link
 
 ---
 
@@ -49,8 +49,4 @@ https://drive.google.com/file/d/1MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07/view?usp=drive
 
 | Действие / Action | ⌨️ Клавиатура и мышь | 🎮 Геймпад |
 | :--- | :--- | :--- |
-| **Перемещение** | `A` / `D` | Left Stick (Влево / Вправо) |
-| **Прыжок** | `Space` | Кнопка `A` |
-| **Инверсия гравитации** | `Shift` | Правый триггер (`RT`) |
-| **Режим установки колодца** | Удерживать `E` | Левый триггер (`LT`) |
-| **Подтвердить установку** | `ЛКМ` (Левая кнопка мыши) | Правый бампер (`RB`) |
+| **Перемещение** | `A` / `D` | Left Stick (Влево /
