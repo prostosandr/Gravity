@@ -1,7 +1,6 @@
 # 🌌 Gravity: Puzzle Platformer
 
-[<img width="800" height="595" alt="Gravity" src="https://github.com/user-attachments/assets/4eeaff25-1181-4608-8549-11e875591709" />](https://drive.google.com/file/d/16YKC-OFHCLfgSbXpWjiEQchynn5krm7M/view?usp=drive_link)
-
+[![Gameplay Showcase](Gravity.gif)](https://drive.google.com/file/d/16YKC-OFHCLfgSbXpWjiEQchynn5krm7M/view?usp=drive_link)
 
 **Gravity** — это хардкорный 2D-платформер, построенный на пространственных головоломках и управлении физикой. Главная особенность игры — манипуляция вектором гравитации, позволяющая перемещаться по стенам, потолкам и использовать инерцию для преодоления препятствий.
 
@@ -12,33 +11,28 @@
 **1. Инверсия гравитации**
 Способность мгновенно менять вектор падения. Открывает простор для нестандартного платформинга, обхода смертельных ловушек и перемещения по потолку.
 
-<img width="800" height="595" alt="Gravity1" src="https://github.com/user-attachments/assets/7ddd1e2f-c45c-4cf2-b24b-7633e816b37b" />
-
+[![Gravity Inversion](Gravity1.gif)](https://drive.google.com/file/d/1Exgr6PvWHt_UI8rpHVObZt_zeeBS5EoX/view?usp=drive_link)
 
 **2. Гравитационные колодцы (Gravity Wells)**
 Локальные зоны с измененным притяжением. Игрок может использовать эти поля, чтобы менять плоскость движения на лету или применять физическую инерцию для катапультирования на дальние расстояния.
 
-<img width="800" height="595" alt="Gravity2" src="https://github.com/user-attachments/assets/c7981fd7-ef9f-4770-a557-a23929e9b7c2" />
-
+[![Gravity Wells Interaction](Gravity2.gif)](https://drive.google.com/file/d/1XrDWQ5ttc7-XNAUdv9U6ssDVU1aBn7FZ/view?usp=drive_link)
 
 **3. Хардкорный дизайн уровней**
 Локации требуют высокой точности, микроконтроля, быстрого чтения таймингов и понимания физики движения. Цена ошибки высока, но механики работают предсказуемо и отзывчиво.
 
-<img width="800" height="595" alt="Gravity3" src="https://github.com/user-attachments/assets/a6634325-1dce-4c8a-8b84-2cb707741f5d" />
-
+[![Hardcore Platforming](Gravity3.gif)](https://drive.google.com/file/d/19X2hP9KhASpPMBaze-zo1M5uPRi0l2la/view?usp=drive_link)
 
 <details>
 <summary><b>🎬 Развернуть галерею геймплея</b></summary>
 <br>
   
-<img width="800" height="595" alt="Gravity4" src="https://github.com/user-attachments/assets/f7f9a8ed-a67e-4c0c-a599-e44a55d70daa" />
-
-
-
-
-
-
+[![Gameplay 4](Gravity4.gif)](https://drive.google.com/file/d/1NKn2QN0kZzFDYfaGio13KSZGrkCJdF3W/view?usp=drive_link)
+[![Gameplay 5](Gravity5.gif)](https://drive.google.com/file/d/192Nj6XE2l0nsgX7xxWkC4EO_AKa3YI2_/view?usp=drive_link)
+![Gameplay 6](Gravity6.gif)[
+](https://drive.google.com/file/d/1dXLr0AeJFRwFImxR9ByDNZCT8Ur4-aMx/view?usp=drive_link)
 </details>
+https://drive.google.com/file/d/1MI5QW1nVc7HEy9xNRc1wZvRfFtNDZU07/view?usp=drive_link
 
 ---
 
