@@ -25,10 +25,10 @@
 <details>
 <summary><b>🎬 Развернуть галерею геймплея (Еще 4 гифки)</b></summary>
 <br>
-https://github.com/user-attachments/assets/672eac26-d26a-43f4-a248-b50dc4c48481
-https://github.com/user-attachments/assets/5acc636c-5044-4ccd-89d8-6d6c83b01779
-https://github.com/user-attachments/assets/22350cec-1200-4ec9-ac9d-55bfdf7ce96a
-https://github.com/user-attachments/assets/08d34b1e-d363-4ab0-8752-16d787dcd8bb
+ <video src="https://github.com/user-attachments/assets/672eac26-d26a-43f4-a248-b50dc4c48481" autoplay loop muted playsinline width="100%"></video>
+ <video src="https://github.com/user-attachments/assets/5acc636c-5044-4ccd-89d8-6d6c83b01779" autoplay loop muted playsinline width="100%"></video>
+ <video src="https://github.com/user-attachments/assets/22350cec-1200-4ec9-ac9d-55bfdf7ce96a" autoplay loop muted playsinline width="100%"></video>
+ <video src="https://github.com/user-attachments/assets/08d34b1e-d363-4ab0-8752-16d787dcd8bb" autoplay loop muted playsinline width="100%"></video>
 </details>
 
 ---
