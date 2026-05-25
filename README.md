@@ -1,4 +1,4 @@
-<img width="800" height="595" alt="Gravity1" src="https://github.com/user-attachments/assets/2969ddd0-9e62-4801-bf0d-1bd0494b3268" /># 🌌 Gravity: Puzzle Platformer
+🌌 Gravity: Puzzle Platformer
 <img width="800" height="595" alt="Gravity-ezgif com-gif-to-webp-converter" src="https://github.com/user-attachments/assets/9e05db76-80de-4b62-b7d0-4c62aa29f09d" />
 
 **Gravity** — это хардкорный 2D-платформер, построенный на пространственных головоломках и управлении физикой. Главная особенность игры — манипуляция вектором гравитации, позволяющая перемещаться по стенам, потолкам и использовать инерцию для преодоления препятствий.
