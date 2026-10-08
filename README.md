@@ -2,7 +2,6 @@
 
 2D-платформер на **Unity/C#** с механикой управления гравитацией.
 Инверсия гравитации, гравитационные поля, физическое движение и сложные уровни.
-Использованы **Unity 2D Physics, Input System** и компонентная архитектура.
 <img width="800" height="595" alt="Gravity-ezgif com-gif-to-webp-converter" src="https://github.com/user-attachments/assets/9e05db76-80de-4b62-b7d0-4c62aa29f09d" />
 <img width="800" height="595" alt="Gravity1" src="https://github.com/user-attachments/assets/ad472564-a501-463f-8831-bddc3175d3be" />
 <img width="800" height="595" alt="Gravity2" src="https://github.com/user-attachments/assets/00bd80c9-f4f5-4837-9b3d-08b033b91d60" />
